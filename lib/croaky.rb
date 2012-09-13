@@ -1,5 +1,6 @@
 require "croaky/version"
 
 module Croaky
-  autoload :builer, 'croaky/builer'
+  autoload :Builer, 'croaky/builer'
+  autoload :ParseOption, 'croaky/parse_sendfax_option.rb'
 end
