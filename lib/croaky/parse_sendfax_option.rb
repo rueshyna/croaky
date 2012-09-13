@@ -17,7 +17,7 @@ module Croaky
         }
         opts.on("-d VALUE"){|value|
           if hash_of_opt[:d].nil?
-            hash_of_opt[:d] << [value]
+            hash_of_opt[:d] = [value]
           else
             hash_of_opt[:d] << value
           end
@@ -26,6 +26,9 @@ module Croaky
       opts.parse!(opt_of_string)
       hash_of_opt[:file] = opt_of_string[0]
       hash_of_opt
+    end
+
+    def initialize
     end
   end
 end
