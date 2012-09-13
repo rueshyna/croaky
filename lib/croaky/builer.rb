@@ -1,20 +1,22 @@
 require 'croaky/parse_sendfax_option'
 
 class Croaky::Builer
-  include ParseSendFaxOption
-  def self.options(*opts)
+  def self.options(opts)
     hash_of_opt = {}
-    if opts.size == 1 && opts.class == "String"
-      hash_of_opt = ParseSendFaxOption.parser(opts[0]).merge(hash_of_opt){|opt,val1,val2| val1+val2}
+    if opts.class.to_s == "String"
+      hash_of_opt = Croaky::ParseSendFaxOption.parse(opts.split).merge(hash_of_opt){|opt,val1,val2| val1+val2}
     else
       opts.each{|opt, value|
-       hash_of_opt = Builer.new(opt,value).merge.hash_of_ops
+       hash_of_opt = option(opt,value).merge hash_of_opt
       }
     end
     hash_of_opt
   end
 
-  def initialize opt, value
-    {opt.to_sym,value}
+  def self.option opt, value
+    {opt.to_sym=>value}
+  end
+
+  def initialize
   end
 end
