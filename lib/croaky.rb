@@ -1,5 +1,5 @@
 require "croaky/version"
 
 module Croaky
-  # Your code goes here...
+  autoload :builer, 'croaky/builer'
 end
