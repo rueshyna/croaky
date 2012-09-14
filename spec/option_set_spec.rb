@@ -4,8 +4,8 @@ describe Croaky::OptionSet do
 
   context "when initialize OptionSet" do
     it "should return initialize option" do
-      @croaky = Croaky::OptionSet.new
-      @croaky.options_status == ({:d => [], :n => false, :P => "", :file => []})
+      croaky = Croaky::OptionSet.new
+      croaky.options_status == ({:d => [], :n => false, :P => "", :file => []})
     end
   end
 
