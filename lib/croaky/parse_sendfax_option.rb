@@ -1,7 +1,7 @@
 require 'optparse'
 
 module Croaky
-  class ParseSendFaxOption
+  class ParseSendfaxOption
     def self.parse option_set, opt_of_string
       option_set.option "d", []  #reset destination
       opts = OptionParser.new{|opts|
