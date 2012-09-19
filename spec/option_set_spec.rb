@@ -1,4 +1,4 @@
-require 'croaky'
+require 'spec_helper'
 
 describe Croaky::OptionSet do
 
