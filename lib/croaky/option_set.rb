@@ -1,6 +1,3 @@
-require 'croaky/parse_sendfax_option'
-require 'croaky/option_set'
-
 module Croaky
   class OptionSet
 
@@ -21,7 +18,7 @@ module Croaky
     end
 
     def string_option opts
-      Croaky::ParseSendFaxOption.parse(self, opts.split)
+      ParseSendfaxOption.parse(self, opts.split)
     end
 
     def option opt,value
