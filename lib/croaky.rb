@@ -1,6 +1,6 @@
-require "croaky/version"
+require 'croaky/version'
+require 'croaky/parse_sendfax_option.rb'
+require 'croaky/option_set.rb'
 
 module Croaky
-  autoload :ParseOption, 'croaky/parse_sendfax_option.rb'
-  autoload :OptionSet, 'croaky/option_set.rb'
 end
