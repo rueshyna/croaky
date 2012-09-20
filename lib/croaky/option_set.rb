@@ -2,7 +2,8 @@ module Croaky
   class OptionSet
 
     def send
-      #to execute sendfax
+      command,message = ShellCall.command self
+      ShellCall.execute command,message
     end
 
     def self.options(opts)
@@ -44,8 +45,8 @@ module Croaky
     end
 
     def initialize
-      # :file should all file or massage...
-      @options = Struct.new(:d,:n,:P,:file).new([],false,"",[])
+      # :facsimile should all file or massage...
+      @options = Struct.new(:d,:n,:P,:facsimile).new([],false,nil,[])
     end
   end
 end
