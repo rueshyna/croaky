@@ -28,7 +28,7 @@ module Croaky
       if opt_of_string.empty?
         raise "it need file or massage."
       else
-        option_set.option :file, opt_of_string
+        option_set.option :facsimile, opt_of_string
       end
       option_set
     end
