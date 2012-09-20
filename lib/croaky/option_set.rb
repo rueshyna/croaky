@@ -46,6 +46,7 @@ module Croaky
 
     def initialize
       # :facsimile should all file or massage...
+      #  add more options here and give it initialize values
       @options = Struct.new(:d,:n,:P,:facsimile).new([],false,nil,[])
     end
   end
